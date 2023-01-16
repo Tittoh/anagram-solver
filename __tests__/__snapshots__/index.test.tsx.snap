@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches the snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="min-h-screen flex flex-col justify-center items-center"
+  >
+    <section
+      class="relative mx-auto max-w-3xl p-4 lg:px-8 "
+    >
+      <div
+        class=""
+      >
+        <div>
+          <h1
+            class="text-4xl py-1 font-bold tracking-tight text-center sm:text-6xl bg-gradient-to-r from-indigo-500 via-blue-500 to-teal-500 bg-clip-text text-transparent"
+          >
+            Anagram Solver
+          </h1>
+          <form
+            class="flex flex-col gap-4"
+          >
+            <div
+              class="mt-4 flex justify-center"
+            >
+              <input
+                class="rounded-md sm:rounded-l-md sm:rounded-r-none border-gray-300"
+                data-testid="input-test"
+                id="anagram"
+                name="anagram"
+                placeholder="Your text ..."
+                type="text"
+                value=""
+              />
+              <button
+                class="hidden lg:inline-flex items-center rounded-r-md border border-l-0 border-gray-300 bg-gray-50 py-3 px-3 text-sm text-gray-500"
+                type="submit"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <button
+              class="mx-auto px-5 lg:hidden font-semibold py-1 rounded-md bg-slate-100 border border-gray-200"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section
+      class="max-w-5xl w-full mx-auto"
+    >
+      <h4
+        class="text-2xl text-gray-700 font-semibold"
+      >
+        Results
+      </h4>
+      <hr
+        class="border-gray-700"
+      />
+      <dl
+        class="w-full py-5 text-gray-900 divide-y divide-gray-200"
+      />
+    </section>
+  </main>
+</DocumentFragment>
+`;

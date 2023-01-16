@@ -14,14 +14,16 @@ interface Solution {
  * @param req - request object
  * @param res - response object
  */
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Solution>
 ) {
-  const inputStr = req.query.str;
+  const inputStr: any = req.query.str;
 
-  if (inputStr) {
-    const result = wordFinder(inputStr, dictionary);
+  if (inputStr?.length >= 3) {
+    console.log('searching: ', inputStr);
+    
+    const result = await wordFinder(inputStr, dictionary);
     const solution: Solution = result.reduce((acc: any, cur: string) => {
       const { length } = cur;
       if (!acc[length]) {
@@ -32,6 +34,8 @@ export default function handler(
     }, {});
 
     return res.status(200).json(solution);
+  } else if (inputStr?.length < 3) {
+    return res.status(500);
   }
 
   return res.status(500);
