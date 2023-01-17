@@ -18,13 +18,15 @@ exports[`Home matches the snapshot 1`] = `
             Anagram Solver
           </h1>
           <form
+            autocomplete="off"
             class="flex flex-col gap-4"
           >
             <div
               class="mt-4 flex justify-center"
             >
               <input
-                class="rounded-md lg:rounded-l-md lg:rounded-r-none border-slate-400"
+                autocomplete="off"
+                class="rounded-md lg:rounded-l-md lg:rounded-r-none border-slate-400 focus:ring-0"
                 data-testid="input-test"
                 id="anagram"
                 name="anagram"
@@ -33,7 +35,7 @@ exports[`Home matches the snapshot 1`] = `
                 value=""
               />
               <button
-                class="hidden lg:inline-flex items-center rounded-r-md border border-l-0 border-gray-300 bg-gray-50 py-3 px-3 text-sm text-gray-500"
+                class="hidden lg:inline-flex items-center rounded-r-md border border-l-0 border-slate-400 bg-gray-50 py-3 px-3 text-sm text-slate-500 active:text-blue-500 hover:bg-blue-50 hover:text-slate-700"
                 type="submit"
               >
                 <svg

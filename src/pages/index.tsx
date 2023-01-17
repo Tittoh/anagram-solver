@@ -73,21 +73,26 @@ export default function Home() {
               <h1 className="text-4xl py-1 font-bold tracking-tight text-center sm:text-6xl bg-gradient-to-r from-indigo-500 via-blue-500 to-teal-500 bg-clip-text text-transparent">
                 Anagram Solver
               </h1>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form
+                onSubmit={handleSubmit}
+                autoComplete="off"
+                className="flex flex-col gap-4"
+              >
                 <div className="mt-4 flex justify-center">
                   <input
+                    autoComplete="off"
                     type="text"
                     name="anagram"
                     id="anagram"
                     data-testid="input-test"
-                    className="rounded-md lg:rounded-l-md lg:rounded-r-none border-slate-400"
+                    className="rounded-md lg:rounded-l-md lg:rounded-r-none border-slate-400 focus:ring-0"
                     placeholder="Your text ..."
                     value={inputValue}
                     onChange={handleInputChange}
                   />
                   <button
                     type="submit"
-                    className="hidden lg:inline-flex items-center rounded-r-md border border-l-0 border-gray-300 bg-gray-50 py-3 px-3 text-sm text-gray-500"
+                    className="hidden lg:inline-flex items-center rounded-r-md border border-l-0 border-slate-400 bg-gray-50 py-3 px-3 text-sm text-slate-500 active:text-blue-500 hover:bg-blue-50 hover:text-slate-700"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
