@@ -21,8 +21,6 @@ export default async function handler(
   const inputStr: any = req.query.str;
 
   if (inputStr?.length >= 3) {
-    console.log('searching: ', inputStr);
-    
     const result = await wordFinder(inputStr, dictionary);
     const solution: Solution = result.reduce((acc: any, cur: string) => {
       const { length } = cur;
