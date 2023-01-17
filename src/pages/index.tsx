@@ -65,10 +65,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen bg-slate-100 flex flex-col justify-center items-center">
+      <main className="min-h-screen relative pb-20 bg-slate-100 flex flex-col justify-center items-center">
         {/* Search section */}
         <section className="mx-auto max-w-3xl p-4 lg:px-8 ">
-          <div className="">
+          <div className={!responded ? '-mt-16' : 'mt-0'}>
             <div>
               <h1 className="text-4xl py-1 font-bold tracking-tight text-center sm:text-6xl bg-gradient-to-r from-indigo-500 via-blue-500 to-teal-500 bg-clip-text text-transparent">
                 Anagram Solver
@@ -80,7 +80,7 @@ export default function Home() {
                     name="anagram"
                     id="anagram"
                     data-testid="input-test"
-                    className="rounded-md sm:rounded-l-md sm:rounded-r-none border-gray-300"
+                    className="rounded-md lg:rounded-l-md lg:rounded-r-none border-slate-400"
                     placeholder="Your text ..."
                     value={inputValue}
                     onChange={handleInputChange}
@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
                 <button
                   type="submit"
-                  className="mx-auto px-5 lg:hidden font-semibold py-1 rounded-md bg-slate-100 border border-gray-200"
+                  className="mx-auto px-5 lg:hidden font-semibold py-1 rounded-md bg-slate-200 border border-slate-500"
                 >
                   Search
                 </button>
@@ -203,7 +203,7 @@ export default function Home() {
             </dl>
           </section>
         )}
-        <footer className=" max-w-5xl px-4 flex justify-center sm:justify-end w-full">
+        <footer className="absolute max-w-5xl px-4 flex bottom-0 justify-center sm:justify-end w-full">
           <h5 className="text-sm pt-8 pb-3">
             Made with 💜 by{' '}
             <a
