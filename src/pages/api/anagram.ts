@@ -2,7 +2,7 @@
 /* eslint-disable */
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const dictionary = require('../../utils/common-words.json');
+const dictionary = require('../../utils/words.json');
 const { wordFinder } = require('../../utils/wordFinder');
 
 interface Solution {
