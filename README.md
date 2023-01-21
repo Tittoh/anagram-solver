@@ -3,8 +3,6 @@
   <h1 align="center">Anagram slover</h1>
 </a>
 
----
-
 A simple full stack anagram solver built with [Next.js](https://nextjs.org/) that helps users find all possible anagrams for a given word or phrase.
 
 ## Getting Started
